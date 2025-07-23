@@ -46,6 +46,11 @@ async def main(message: cl.Message):
                                  input=history,
                                  run_config=config)
 
+        print(f"Result Attributes: {dir(result)}")  # List all attributes
+        print(f"Result: {result}")
+        
+         
+
         print(f"RAW Result: {result}")
         response_content = result.final_output
 
@@ -64,3 +69,10 @@ async def main(message: cl.Message):
         msg.content = f"Error: {str(e)}"
         await msg.update()
         print(f"Error: {str(e)}")
+
+
+
+
+
+
+
